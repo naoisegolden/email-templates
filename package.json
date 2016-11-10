@@ -1,0 +1,25 @@
+{
+  "name": "email-templates-toolbox",
+  "version": "1.0.0",
+  "description": "Build email templates with SASS and Browsersync",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naoisegolden/email-templates-toolbox.git"
+  },
+  "author": "Naoise Golden Santos <naoise.golden@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naoisegolden/email-templates-toolbox/issues"
+  },
+  "homepage": "https://github.com/naoisegolden/email-templates-toolbox#readme",
+  "dependencies": {
+    "email-templates": "^2.5.3",
+    "node-sass": "^3.11.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-beta6"
+  }
+}
