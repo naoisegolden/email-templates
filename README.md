@@ -19,3 +19,5 @@ The template example uses [pug.js](https://pugjs.org) and [SASS](https://sass-la
 $ npm install
 $ node index.js
 ```
+
+Generates a file `index.html` in folder `build`.
