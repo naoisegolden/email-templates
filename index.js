@@ -3,10 +3,10 @@ var fs = require('fs');
 var EmailTemplate = require('email-templates').EmailTemplate;
 var pug = require('pug');
 var locals = require('./data.json');
+var bs = require("browser-sync").create();
 
 var templateDir = path.resolve(__dirname, 'templates', 'example-email');
 var renderDir = path.resolve(__dirname, 'build');
-var template = new EmailTemplate(templateDir);
 
 /* Writes `content` in `dir`/`filename`.
  * Returns a promise which is resolved when the
@@ -18,7 +18,6 @@ var writeFile = function(dir, filename, content) {
   }
 
   var file = path.resolve(dir, filename);
-  console.log(file);
 
   return new Promise(function(resolve, reject) {
     fs.writeFile(file, content, function(err) {
@@ -28,17 +27,36 @@ var writeFile = function(dir, filename, content) {
   });
 }
 
-/* Renders EmailTemplate `template` with local variables in `locals`.
- * Returns a promise with an object containing `{ html, text, subject }`.
+/* Renders template with local variables in `locals` file
+ * and it saves the output to `build/index.html`.
+ * Returns a promise that resolves when file is written.
  */
-var renderTemplate = function(template, locals) {
-  return template.render(locals);
+var renderTemplate = function(templateDir, locals) {
+  // FIXME: https://github.com/crocodilejs/node-email-templates/issues/208
+  var template = new EmailTemplate(templateDir);
+
+  return template.render(locals)
+    .then(function(result) {
+      return writeFile(renderDir, 'index.html', result.html);
+    });
 }
 
-renderTemplate(template, locals)
-  .then(function(result) {
-    return writeFile(renderDir, 'index.html', result.html);
-  })
+/* Watches for changes in template and re-renders it.
+ */
+fs.watch(templateDir, function(event, filename) {
+  renderTemplate(templateDir, locals)
+    .then(function() {
+      bs.reload();
+    });
+});
+
+/* Triggers the rendering of the template and opens it
+ * in http://localhost:3001/, reloads automatically when
+ * the template changes.
+ */
+renderTemplate(templateDir, locals)
   .then(function() {
-    // blank on purpose
+    bs.init({
+      server: renderDir
+    });
   });

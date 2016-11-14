@@ -1,8 +1,8 @@
 # Email Templates Toolbox
-Build email templates with SASS and PUG.
+Build email templates with SASS, PUG and Browsersync.
 
 ## How to use
-1. Create a new folder in `./templates` for your tempalte
+1. Create a new folder in `./templates` for your template
 2. Make sure to include:
   - html.{{ext}} (required) - for html format of email
   - text.{{ext}} (optional) - for text format of email
@@ -20,4 +20,4 @@ $ npm install
 $ node index.js
 ```
 
-Generates a file `index.html` in folder `build`.
+Opens the rendered template in http://localhost:3001/ and automatically reloads the browser every time there is a change to the template or the styles.
