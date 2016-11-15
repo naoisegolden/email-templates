@@ -9,7 +9,7 @@ tr
     //- The centering table keeps the content
     //- tables centered in the emailBody table,
     //- in case its width is set to 100%.
-    table(width="100%")
+    table.centeringTable
       tr
         td(align="center")
 
@@ -18,7 +18,7 @@ tr
           //- that gets overridden by the media query.
           //- Most content tables within can then be
           //- given 100% widths.
-          table.flexibleContainer(width="600")
+          table.flexibleContainer
             tr
               td.flexibleContainerCell
 

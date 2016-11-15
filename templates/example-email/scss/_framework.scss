@@ -1,9 +1,28 @@
 // FRAMEWORK STYLES
+@import 'variables';
+
+#bodyTable {
+  height: 100%;
+  width: 100%;
+}
+
+#emailBody,
+.flexibleContainer {
+  width: $container-width;
+}
+
+.centeringTable {
+  width: 100%;
+}
+
+.col2Container {
+  width: $container-width/2 - 2*$gutter;
+}
 
 .flexibleContainerCell {
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-top: $gutter;
+  padding-right: $gutter;
+  padding-left: $gutter;
 }
 
 .flexibleImage {
@@ -11,16 +30,16 @@
 }
 
 .bottomShim {
-  padding-bottom: 20px;
+  padding-bottom: $gutter;
 }
 
 .imageContent,
 .imageContentLast {
-  padding-bottom: 20px;
+  padding-bottom: $gutter;
 }
 
 .nestedContainerCell {
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-top: $gutter;
+  padding-right: $gutter;
+  padding-left: $gutter;
 }

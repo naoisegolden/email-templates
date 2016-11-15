@@ -21,7 +21,8 @@
     desktop.
   */
   table[id="emailBody"],
-  table[class="flexibleContainer"] {
+  table[class="flexibleContainer"],
+  table[class="col2Container"] {
     width: 100% !important;
   }
 

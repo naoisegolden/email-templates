@@ -1,0 +1,40 @@
+// Sizes
+$container-width: 600px;
+$gutter: 20px;
+$primary-border-radius: 4px;
+
+// Fonts
+$header-font-size: 20px;
+$header-line-height: 125%;
+$text-font-size: 16px;
+$text-line-height: 125%;
+$primary-font-family: Helvetica, Arial, sans-serif;
+$header-font-family: $primary-font-family;
+$text-font-family: $primary-font-family;
+
+// Colors
+$primary-background-color: #F5F5F5;
+$secondary-background-color: #E5E5E5;
+$content-background-color: #FFFFFF;
+$primary-border-color: #DDDDDD;
+$secondary-border-color: #CCCCCC;
+$header-color: #202020;
+$text-color: #404040;
+$action-color: #2C9AB7;
+$white-color: #FFFFFF;
+
+// Button
+$button-border-radius: $primary-border-radius;
+$button-font-size: 18px;
+$button-line-height: 100%;
+$button-background-color: $action-color;
+$button-text-color: $white-color;
+$button-font-family: $primary-font-family;
+$button-padding: 15px;
+$button-weight: bold;
+
+// Calendar
+$calendar-color: $action-color;
+$calendar-font-family: $primary-font-family;
+$calendar-font-size: 60px;
+$calendar-line-height: 100%;

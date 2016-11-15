@@ -2,10 +2,8 @@ extend module_row.pug
 
 block content
   //- CONTENT TABLE
-  //- In multi-column content blocks, the
-  //- content tables are given set widths
-  //- and the flexibleContainer class.
-  table.flexibleContainer(align="left" width="260")
+  //- 2-column content blocks
+  table.col2Container(align="left")
     tr
       td.textContent
         h3 Left Column
@@ -13,9 +11,10 @@ block content
         | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.
 
   //- CONTENT TABLE
-  table.flexibleContainer(align="right" width="260")
+  table.col2Container(align="right")
     tr
       td.textContentLast
         h3 Right Column
         br
-        | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.
+        | A kitten or kitty is a juvenile
+        //- | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.

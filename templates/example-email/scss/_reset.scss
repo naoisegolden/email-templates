@@ -11,6 +11,13 @@ body,
 
 table {
   border-collapse: collapse;
+  border: 0;
+  padding: 0;
+  border-spacing: 0;
+}
+
+td {
+  vertical-align: top;
 }
 
 img,
