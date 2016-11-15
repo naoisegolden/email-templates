@@ -1,50 +1,5 @@
-doctype transitional
-html(xmlns="http://www.w3.org/1999/xhtml")
-  head
-    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8" )
-    meta(name="viewport" content="width=device-width")
-    title #{subject}
+extend ../modular-template/html
 
-    //- This email is an experimental proof-of-concept based on the
-    //- idea that the most common design patterns seen in email can
-    //- be placed in modular blocks and moved around to create
-    //- different designs.
-    //-
-    //- The same principle is used to build the email templates in
-    //- MailChimp's Drag-and-Drop email editor.
-    //-
-    //- This email is optimized for mobile email clients, and even
-    //- works relatively well in the Android Gmail App, which does
-    //- not support Media Queries, but does have limited mobile-
-    //- friendly functionality.
-    //-
-    //- While this coding method is very flexible, it can be more
-    //- brittle than traditionally-coded emails, particularly in
-    //- Microsoft Outlook 2007-2010. Outlook-specific conditional
-    //- CSS is included to counteract the inconsistencies that
-    //- crop up.
-    //-
-    //- For more information on HTML email design and development,
-    //- visit http://templates.mailchimp.com
-
-    style
-      include styles/mediaqueries.css
-
-    include styles/outlook.pug
-
-  body
-    center
-      table#bodyTable
-        tr
-          td#bodyCell(align="center")
-
-            //- EMAIL CONTAINER
-            //- The table "emailBody" is the email's container.
-            //- Its width can be set to 100% for a color band
-            //- that spans the width of the page.
-            table#emailBody
-
-              include partials/1_column
-              include partials/2_columns
-
-            //- END EMAIL CONTAINER
+block email-body
+  include modules/1-column-example
+  include modules/2-columns-example
