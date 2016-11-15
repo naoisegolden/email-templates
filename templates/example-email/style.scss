@@ -1,3 +1,8 @@
-h1 {
-  color: red;
-}
+// Template based on Mailchimp's Modular template
+// https://github.com/mailchimp/email-blueprints
+
+@import 'scss/reset';
+@import 'scss/client_specific';
+@import 'scss/framework';
+@import 'scss/inline';
+@import 'scss/general';

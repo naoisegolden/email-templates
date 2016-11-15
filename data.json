@@ -1,4 +1,3 @@
 {
-  "email": "mamma.mia@spaghetti.com",
-  "name": {"first": "Mamma", "last": "Mia"}
+  "subject": "Email Subject"
 }

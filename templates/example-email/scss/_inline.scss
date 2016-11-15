@@ -1,0 +1,51 @@
+// Table styles which are inline in the Mailchimp code
+#bodyTable {
+  border: 0;
+  padding: 0;
+  border-spacing: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#bodyCell {
+  vertical-align: top;
+}
+
+#emailBody {
+  border: 0;
+  padding: 0;
+  border-spacing: 0;
+  width: 600px;
+
+  td {
+    vertical-align: top;
+  }
+
+  td table {
+    border: 0;
+    padding: 0;
+    border-spacing: 0;
+    // width: 100%;
+
+    td {
+      vertical-align: top;
+    }
+  }
+}
+
+.flexibleContainer {
+  border: 0;
+  padding: 0;
+  border-spacing: 0;
+  // width: 600px;
+}
+
+.flexibleContainerCell {
+  // width: 600px;
+}
+
+.textContent {
+  vertical-align: top;
+}
+
+.textContentLast {}

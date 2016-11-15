@@ -1,0 +1,18 @@
+//- Outlook Conditional CSS
+//- These two style blocks target Outlook 2007 & 2010 specifically, forcing
+//- columns into a single vertical stack as on mobile clients. This is
+//- primarily done to avoid the 'page break bug' and is optional.
+
+//- More information here:
+//- http://templates.mailchimp.com/development/css/outlook-conditional-css
+
+| <!--[if mso 12]>
+|   <style type="text/css">
+|     .flexibleContainer{display:block !important; width:100% !important;}
+|   </style>
+| <![endif]-->
+| <!--[if mso 14]>
+|   <style type="text/css">
+|     .flexibleContainer{display:block !important; width:100% !important;}
+|   </style>
+| <![endif]-->
