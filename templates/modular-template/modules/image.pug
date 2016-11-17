@@ -1,0 +1,8 @@
+mixin image(src)
+  //- The table cell imageContent has padding
+  //- applied to the bottom as part of the framework,
+  //- ensuring images space correctly in Android Gmail.
+  table
+    tr
+      td.imageContent
+          img(src=src).flexibleImage

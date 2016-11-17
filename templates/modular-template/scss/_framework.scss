@@ -31,13 +31,14 @@
 
 .flexibleImage {
   height: auto;
+  max-width: 100%;
 }
 
 .bottomShim {
   padding-bottom: $gutter;
 }
 
-.imageContent,
+// .imageContent,
 .imageContentLast {
   padding-bottom: $gutter;
 }

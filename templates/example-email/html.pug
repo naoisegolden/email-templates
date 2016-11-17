@@ -4,6 +4,7 @@ include ../modular-template/modules/1-column
 include ../modular-template/modules/2-columns
 include ../modular-template/modules/button
 include ../modular-template/modules/nested
+include ../modular-template/modules/image
 
 
 block email-body
@@ -59,3 +60,51 @@ block email-body
       +button("http://example.com")
         | Purchase now
       br
+
+  +module
+    +image("http://placekitten.com/g/1120/800")
+
+  +module
+    +2-column
+      +image("http://placekitten.com/g/520/520")
+      br
+      h3 Left Column
+      br
+      = lorem
+
+    +2-column("last")
+      +image("http://placekitten.com/g/520/520")
+      br
+      h3 Right Column
+      br
+      = lorem
+
+  +module
+    +nested
+      +1-column
+        +image("http://placekitten.com/g/1120/800")
+
+  +module
+    +nested
+      +2-column
+        +image("http://placekitten.com/g/520/520")
+        br
+        h3 Left Nested Column
+        br
+        = lorem
+
+      +2-column("last")
+        +image("http://placekitten.com/g/520/520")
+        br
+        h3 Right Nested Column
+        br
+        = lorem
+
+  +module
+    +nested
+      +2-column
+        +image("http://placekitten.com/g/520/520")
+
+      +2-column("last")
+        = lorem
+    br
