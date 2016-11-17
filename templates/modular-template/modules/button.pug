@@ -1,0 +1,11 @@
+mixin button(href)
+  //- The emailButton table's width can be changed
+  //- to affect the look of the button. To make the
+  //- button width dependent on the text inside, leave
+  //- the width blank. When a button is placed in a column,
+  //- it's helpful to set the width to 100%.
+  table.emailButton
+    tr
+      td.buttonContent
+        a(href=href target="_blank")
+          block

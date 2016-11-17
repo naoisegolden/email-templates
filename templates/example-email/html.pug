@@ -1,5 +1,28 @@
 extend ../modular-template/html
+include ../modular-template/modules/module-row
+include ../modular-template/modules/1-column
+include ../modular-template/modules/2-columns
+include ../modular-template/modules/button
 
 block email-body
-  include modules/1-column-example
-  include modules/2-columns-example
+
+  +module
+    +1-column
+      h3 Title
+      br
+      | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.
+
+  +module
+    +2-column
+      h3 Title
+      br
+      | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.
+
+    +2-column("last")
+      h3 Title
+      br
+      | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.
+
+  +module("center")
+    +button("http://example.com")
+      | Purchase now
