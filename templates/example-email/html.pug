@@ -3,6 +3,8 @@ include ../modular-template/modules/module-row
 include ../modular-template/modules/1-column
 include ../modular-template/modules/2-columns
 include ../modular-template/modules/button
+include ../modular-template/modules/nested
+
 
 block email-body
 
@@ -28,3 +30,32 @@ block email-body
   +module("center")
     +button("http://example.com")
       | Purchase now
+
+  +module
+    +nested
+      +1-column
+        h3 One Nested Column
+        br
+        = lorem
+
+  +module
+    +nested
+      +2-column
+        h3 Left Nested Column
+        br
+        = lorem
+
+      +2-column("last")
+        h3 Right Nested Column
+        br
+        = lorem
+
+  +module
+    +nested
+      +1-column
+        h3 Callout
+        br
+        = lorem
+      +button("http://example.com")
+        | Purchase now
+      br

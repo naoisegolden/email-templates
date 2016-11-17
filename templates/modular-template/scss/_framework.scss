@@ -17,6 +17,10 @@
 
 .col2Container {
   width: $container-width/2 - 2*$gutter;
+
+  .nestedContainerCell & {
+    width: $container-width/2 - 3*$gutter;
+  }
 }
 
 .flexibleContainerCell {
@@ -36,6 +40,10 @@
 .imageContent,
 .imageContentLast {
   padding-bottom: $gutter;
+}
+
+.nestedContainer {
+  width: 100%;
 }
 
 .nestedContainerCell {
