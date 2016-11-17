@@ -6,22 +6,24 @@ include ../modular-template/modules/button
 
 block email-body
 
+  - lorem = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
   +module
     +1-column
-      h3 Title
+      h3 One Column
       br
-      | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.
+      = lorem
 
   +module
     +2-column
-      h3 Title
+      h3 Left Column
       br
-      | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.
+      = lorem
 
     +2-column("last")
-      h3 Title
+      h3 Right Column
       br
-      | A kitten or kitty is a juvenile domesticated cat. A feline litter usually consists of two to five kittens. To survive, kittens need the care of their mother for the first several weeks of their life. Kittens are highly social animals and spend most of their waking hours playing and interacting with available companions.
+      = lorem
 
   +module("center")
     +button("http://example.com")
