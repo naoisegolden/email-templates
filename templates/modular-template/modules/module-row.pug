@@ -1,29 +1,31 @@
-//- MODULE ROW
-//- To move or duplicate any of the design patterns
-//- in this email, simply move or copy the entire
-//- MODULE ROW section for each content block.
-tr
-  td(align="center")
+mixin module(align)
+  - align = align || "left"
+  //- MODULE ROW
+  //- To move or duplicate any of the design patterns
+  //- in this email, simply move or copy the entire
+  //- MODULE ROW section for each content block.
+  tr
+    td(align="center")
 
-    //- CENTERING TABLE
-    //- The centering table keeps the content
-    //- tables centered in the emailBody table,
-    //- in case its width is set to 100%.
-    table.centeringTable
-      tr
-        td(align="center")
+      //- CENTERING TABLE
+      //- The centering table keeps the content
+      //- tables centered in the emailBody table,
+      //- in case its width is set to 100%.
+      table.centeringTable
+        tr
+          td(align="center")
 
-          //- FLEXIBLE CONTAINER
-          //- The flexible container has a set width
-          //- that gets overridden by the media query.
-          //- Most content tables within can then be
-          //- given 100% widths.
-          table.flexibleContainer
-            tr
-              td.flexibleContainerCell
+            //- FLEXIBLE CONTAINER
+            //- The flexible container has a set width
+            //- that gets overridden by the media query.
+            //- Most content tables within can then be
+            //- given 100% widths.
+            table.flexibleContainer
+              tr
+                td(align=align).flexibleContainerCell
 
-                //- CONTENT TABLE
-                //- The content table is the first element
-                //- that's entirely separate from the structural
-                //- framework of the email.
-                block module-content
+                  //- CONTENT TABLE
+                  //- The content table is the first element
+                  //- that's entirely separate from the structural
+                  //- framework of the email.
+                  block

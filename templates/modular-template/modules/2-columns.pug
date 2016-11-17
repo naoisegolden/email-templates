@@ -1,15 +1,7 @@
-extend module-row
-
-block module-content
-  //- CONTENT TABLE
-  //- 2-column content blocks
-  table.col2Container(align="left")
+//- 2-column content blocks
+mixin 2-column(position)
+  - align = position === "last" ? "right" : "left"
+  table.col2Container(align=align)
     tr
       td.textContent
-        block left-content
-
-  //- CONTENT TABLE
-  table.col2Container(align="right")
-    tr
-      td.textContentLast
-        block right-content
+        block
