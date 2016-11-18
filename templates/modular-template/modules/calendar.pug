@@ -1,0 +1,18 @@
+mixin calendar(day, month)
+  table(align="left").calendarContainerLeft
+    tr
+      td(align="center").bottomShim
+        table.emailCalendar
+          tr
+            td(align="center")
+              table
+                tr
+                  td(align="center").emailCalendarMonth
+                    = month
+                tr
+                  td.emailCalendarDay
+                    = day
+  table(align="right").calendarContainerRight
+    tr
+      td.textContent
+        block

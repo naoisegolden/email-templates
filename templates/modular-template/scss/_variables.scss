@@ -35,6 +35,7 @@ $button-weight: bold;
 $button-width: 260px;
 
 // Calendar
+$calendar-width: $container-width * 1/3.75; // 160 px
 $calendar-color: $action-color;
 $calendar-font-family: $primary-font-family;
 $calendar-font-size: 60px;

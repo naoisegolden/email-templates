@@ -23,6 +23,19 @@
   }
 }
 
+.emailCalendar,
+.calendarContainerLeft {
+  width: $calendar-width;
+}
+
+.calendarContainerRight {
+  width: $container-width - $calendar-width - 4*$gutter;
+
+  .nestedContainerCell & {
+    width: $container-width - $calendar-width - 6*$gutter;
+  }
+}
+
 .flexibleContainerCell {
   padding-top: $gutter;
   padding-right: $gutter;
@@ -59,4 +72,14 @@
 
 .emailButton {
   width: $button-width;
+}
+
+.emailCalendar {
+  & > tr > td {
+    padding: 5px;
+  }
+
+  & > tr > td > table {
+    width: 100%;
+  }
 }

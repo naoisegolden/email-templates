@@ -5,6 +5,7 @@ include ../modular-template/modules/2-columns
 include ../modular-template/modules/button
 include ../modular-template/modules/nested
 include ../modular-template/modules/image
+include ../modular-template/modules/calendar
 
 
 block email-body
@@ -106,5 +107,18 @@ block email-body
         +image("http://placekitten.com/g/520/520")
 
       +2-column("last")
+        = lorem
+
+  +module
+    +calendar("16", "September")
+      h3 Calendar Content
+      br
+      = lorem
+
+  +module
+    +nested
+      +calendar("16", "September")
+        h3 Nested Calendar Content
+        br
         = lorem
     br
