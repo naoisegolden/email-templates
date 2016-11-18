@@ -1,5 +1,6 @@
-mixin nested
+mixin nested(align)
+  - align = align || "left"
   table.nestedContainer
     tr
-      td.nestedContainerCell
+      td.nestedContainerCell(align=align)
         block
