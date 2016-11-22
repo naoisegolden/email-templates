@@ -18,6 +18,11 @@ body,
   border-radius: $primary-border-radius;
 }
 
+#emailFooter {
+  padding-top: $gutter;
+  font-family: $text-font-family;
+}
+
 h1,
 h2,
 h3,

@@ -38,12 +38,20 @@ html(xmlns="http://www.w3.org/1999/xhtml")
         tr
           td#bodyCell(align="center")
 
+            //- EMAIL HEADER
+            table#emailHeader
+              block email-header
+            //- END EMAIL HEADER
+
             //- EMAIL CONTAINER
             //- The table "emailBody" is the email's container.
             //- Its width can be set to 100% for a color band
             //- that spans the width of the page.
             table#emailBody
-
               block email-body
-
             //- END EMAIL CONTAINER
+
+            //- EMAIL FOOTER
+            table#emailFooter
+              block email-footer
+            //- END EMAIL FOOTER
