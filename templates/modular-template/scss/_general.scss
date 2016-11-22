@@ -1,5 +1,4 @@
 // GENERAL STYLES
-@import 'variables';
 
 body,
 #bodyTable {
@@ -38,7 +37,7 @@ h6 {
 
 .textContent,
 .textContentLast {
-  color: $text-color;
+  color: $primary-text-color;
   font-family: $text-font-family;
   font-size: $text-font-size;
   line-height: $text-line-height;

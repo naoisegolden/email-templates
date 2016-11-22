@@ -13,13 +13,15 @@ $header-font-family: $primary-font-family;
 $text-font-family: $primary-font-family;
 
 // Colors
+$lighten-amount: 30%;
 $primary-background-color: #F5F5F5;
 $secondary-background-color: #E5E5E5;
 $content-background-color: #FFFFFF;
 $primary-border-color: #DDDDDD;
 $secondary-border-color: #CCCCCC;
 $header-color: #202020;
-$text-color: #404040;
+$primary-text-color: #404040;
+$secondary-text-color: lighten($primary-text-color, $lighten-amount);
 $action-color: #2C9AB7;
 $white-color: #FFFFFF;
 
